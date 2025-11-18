@@ -1,3 +1,9 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "news-site") or die("Connection failed: " . mysqli_connect_errno());
+$conn = mysqli_connect("localhost", "root", "", "news-site");
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully";
 ?>
